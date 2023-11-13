@@ -13,9 +13,13 @@ const images = [
   },
 ];
 
-const list = document.querySelector(".gallery");
 
-const markup = images
-  .map((image) => `<li><img src="${image.url}" alt="${image.alt}" width="200" height="auto"></li>`)
+const gallery = document.querySelector(".gallery")
 
-list.insertAdjacentHTML("beforeend", markup)
+const galleryRender = ({url, alt}) => 
+`<li class="photo-box"><img class="photo" src="${url}" alt="${alt}" width="200" height="auto"></li>`;
+
+const galleryMarkup = images.map(galleryRender).join(``);
+
+gallery.insertAdjacentHTML(`beforeend`,galleryMarkup);
+

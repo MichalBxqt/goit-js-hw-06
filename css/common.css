@@ -22,3 +22,17 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.photo-box {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo {
+  margin-top: 20px;
+  max-width: 200px;
+  background-color: #fff;
+  border: 2px dashed tomato;
+}
+
